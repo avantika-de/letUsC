@@ -1,0 +1,83 @@
+Q1- main( )
+{
+ float a = 12.25, b = 12.52 ;
+ if ( a = b )
+ printf ( "\na and b are equal" ) ; 
+ Answer - In the if statement, assignment operator = is being used for comparision instead of the comparision operator ==. This results in its value being always true. 
+ 
+ Q2- main( )
+{
+ int j = 10, k = 12 ;
+ if ( k >= j )
+ {
+ {
+ k = j ;
+ j = k ;
+ }
+ }
+}
+Answer - There is no error in this code. The extra parantheses makes no problem. 
+
+Q3 - main( )
+{
+ if ( 'X' < 'x' )
+ printf ( "\nascii value of X is smaller than that of x" ) ;
+} 
+Answer - There is no error in this code. When comparing two strings in C, their ASCII values get compared, which is perfectly fine. 
+
+Q4 - main( )
+{
+ int x = 10 ;
+ if ( x >= 2 ) then
+ printf ( "\n%d", x ) ;
+}
+Answer - The error is with the use of then. there is no keyword has then in C. 
+
+Q5 - main( )
+{
+ int x = 10 ;
+ if x >= 2
+ printf ( "\n%d", x ) ;
+} 
+Answer - There are no brackets in the if statement. This will cause error. We can skip the parantheses but not the brackets. 
+
+Q6 - main( )
+{
+ int x = 10, y = 15 ;
+ if ( x % 2 = y % 3 )
+ printf ( "\nCarpathians" ) ;
+}
+Answer - In case of comparision operator of ==, the assignment operator is being used. This will lead to an always true value for the if statement. 
+
+Q7 - main( )
+{
+ int x = 30 , y = 40 ;
+ if ( x == y )
+ printf( "x is equal to y" ) ;
+ elseif ( x > y )
+ printf( "x is greater than y" ) ;
+ elseif ( x < y )
+ printf( "x is less than y" ) ; 
+ Answer - There should be a space between else and if in elseif. There is no keyword elseif in C. 
+ 
+ 
+ 
+ Q8 - main( )
+{
+ int x = 10 ;
+ if ( x >= 2 ) then
+ printf ( "\n%d", x ) ;
+}
+Answer - There is no keyword then in C. It will cause error. 
+
+
+Q9 - main( )
+{
+ int a, b ;
+ scanf ( "%d %d",a, b ) ;
+ if ( a > b ) ;
+ printf ( "This is a game" ) ;
+ else
+ printf ( "You have to play it" ) ;
+} 
+Answer - There is no & in the scanf. This will cause segmentation error.. 
