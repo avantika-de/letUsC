@@ -1,0 +1,118 @@
+Q1- main( )
+{
+ int a = 300, b, c ;
+ if ( a >= 400 )
+ b = 300 ;
+ c = 200 ;
+ printf ( "\n%d %d", b, c ) ;
+} 
+A1 - there will be a garbage value printed for b and 200 for c. 
+Explaination - This is because there are no curly braces after the if statement. the scope of if statement if there are no braces is just the next statement.
+
+Q2 -main( )
+{
+ int a = 500, b, c ;
+ if ( a >= 400 )
+ b = 300 ;
+ c = 200 ;
+ printf ( "\n%d %d", b, c ) ;
+} 
+A2 - In this case, 300 and 200 will be printed. 
+Explaination - The scope of if statement is the next statement. since a is greater than 400, the value of b is assigned. 
+
+Q3- main( )
+{
+ int x = 10, y = 20 ;
+ if ( x == y ) ;
+ printf ( "\n%d %d", x, y ) ;
+} 
+A3 - 10 and 20 are printed. 
+Explaination - Because there is a semi colon after the if statement, the condition whether true or false does not impact the next if statement. 
+
+Q4 - main( )
+{
+ int x = 3, y = 5 ;
+ if ( x == 3 )
+ printf ( "\n%d", x ) ;
+ else ;
+ printf ( "\n%d", y ) ;
+}
+A4 - 3,5
+Explaination - The first x valueis printed because the if statement leads to true. the next y is printed because there is a semi colon after else; and the if-else condition is completed. 
+
+Q5 - main( )
+{
+ int x = 3 ;
+ float y = 3.0 ;
+ if ( x == y )
+ printf ( "\nx and y are equal" ) ;
+ else
+ printf ( "\nx and y are not equal" ) ;
+}
+A5 - x and y are equal. 
+Explaination - Because, in C  The integer is implicitly converted to a floating point value for the comparison.
+
+Q6 - main( )
+{
+ int x = 3, y, z ;
+ y = x = 10 ;
+ z = x < 10 ;
+ printf ( "\nx = %d y = %d z = %d", x, y, z ) ;
+}
+A6 - 10,10,0
+Explaination - The assignment operation is done from left to right. x is assigned a value of 10 and that is then assigned to 10. 
+				
+Q7 - main( )
+{
+ int k = 35 ;
+ printf ( "\n%d %d %d", k == 35, k = 50, k > 40 ) ;
+} 
+A7 - 0,50,0
+Explaination - printf is evaluated from right to left. 35>40 is evaluated first, and results in false. 50 gets assigned to x and you get 50. 50==35 is evaluated and you get a false. 
+
+Q8 - main( )
+{
+ int i = 65 ;
+ char j = ‘A’ ;
+ if ( i == j )
+ printf ( “C is WOW” ) ;
+ else
+ printf( "C is a headache" ) ;
+} 
+A8- C is WOW
+Explaination -  The ASCII value of A is 65 and when an integer is compared with a character, the ASCII value is same. and hence C is WOW is printed. 
+
+
+Q9 - main( )
+{
+ int a = 5, b, c ;
+ b = a = 15 ;
+ c = a < 15 ;
+ printf ( "\na = %d b = %d c = %d", a, b, c ) ;
+} 
+A9 - 15,15,0
+Explaination - In the first line, a is assigned the value of 15, b is assigned the value of 15. In case of c, 15<15, c is false and c is 0.
+
+Q10 - main( )
+{
+ int x = 15 ;
+ printf ( "\n%d %d %d", x != 15, x = 20, x < 30 ) ;
+}
+A10 - 1,20,1
+Explaination -printf is executed from right to left. 15<30 and you get true. 20 gets assigned to x and so 20 gets printed. and 20 !=15 so you get true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
