@@ -1,0 +1,124 @@
+Q1. main( )
+{
+ int i = 4, z = 12 ;
+ if ( i = 5 || z > 50 )
+ printf ( "\nDean of students affairs" ) ;
+ else
+ printf ( "\nDosa" ) ;
+}
+Answer- Dean of students affairs.
+Explaination - This is because there is an or operator. and the first condition is an assignment operator instead of conditional, making it true in each case. so, true or anything will always lead to true. 
+
+Q2. main( )
+{
+ int i = 4, z = 12 ;
+ if ( i = 5 && z > 5 )
+ printf ( "\nLet us C" ) ;
+ else
+ printf ( "\nWish C was free !" ) ;
+}
+Answer - Let us C
+Explaination - In this case, the first condition will always be true. However, since it is an and operator, it is important for the second condition to evaluate true for it to be true. is 12>5, which is true. Hnece the first print inside if gets printed. 
+
+Q3. main( )
+{
+ int i = 4, j = -1, k = 0, w, x, y, z ;
+ w = i || j || k ;
+ x = i && j && k ;
+ y = i || j && k ;
+ z = i && j || k ;
+ printf ( "\nw = %d x = %d y = %d z = %d", w, x, y, z ) ;
+} 
+Answer - 1,0,1,1
+Explaination - Let us solve each of these - 
+w = i|| j|| k -> 4||-1||0. In case of C, true means anything that is non zero. In this case, although there is a zero value it is bound by the OR operator. and so w will be 1 or a non-zero value. 
+x= i && j && k. In this case, these values are bind by an and operator. for x to evaluate to be true, all the three values should be true. However, this is not the case. and hence x will be 0.
+y = i || j && k. In this case, the precedence rules comes over as there are no brackets. So, and operator is evaluated first and then the Or operator. They are evaluated from left to right. So, the code now becomes i ||(j &&k), 4 || (-1 && 0) which is 4||0 and is true or false. leading to final true, which is a non zero number. 
+z= i && j || k. In this case, like previous, and is evaluated first. (i&&j) || k which is (4 && -1) || 0, since in the OR case both are non zero values, it leads to true. So true || false, becomes true. 
+
+Q4 . main( )
+{
+ int i = 4, j = -1, k = 0, y, z ;
+ y = i + 5 && j + 1 || k + 2 ;
+ z = i + 5 || j + 1 && k + 2 ;
+ printf ( "\ny = %d z = %d", y, z ) ;
+} 
+Answer - 1,1
+Explaination - Let us evaluate y. y = 4 + 5 && -1 + 1 || 0 + 2. In this case, the arithmetic operators take precedence over the conditional, and so are evaluated first, from left to right. The equation then becomes, 9 && 0 || 2. Since && has more importance than ||, the equation becomes, (9&&0)||2. This results in 0 ||2. which is a non zero value, because for or opertor to evaluate to be true, any one condition has to be true. 
+Let us now evaluate z. z = 4+5 || -1 +1 && 0+2. In this case, the arithmetic operators are evaluated first. So, it becomes 9 || 0 && 2. The and operator is evaluated first and it becomes 9 || (0&&2). For an equation with and operator to evaluate to be true, all the values should be non-zero. 9||0. This results in a non zero value, because yet again, for or operator to be true, any one value should be true. 
+
+Q5. main( )
+{
+ int i = -3, j = 3 ;
+ if ( !i + !j * 1 )
+ printf ( "\nMassaro" ) ;
+ else
+ printf ( "\nBennarivo" ) ;
+} 
+Answer - nBennarivo
+Explaination - Let us solve the equation. !-3 + !3 * 1. Here ! is a unary operator and has more precendence than the arithmetic operators, and hence is evaluated first. !(true) + !(true) * 1 becomes false +false *1. In between multiplication and addition, multiplicative have more precedence. So, it becomes false+false. and the answer is false. or 0. The if condition fails, and we go to the else condition. 
+
+Q6 - main( )
+{
+ int a = 40 ;
+ if ( a > 40 && a < 45 )
+ printf ( "a is greater than 40 and less than 45" ) ;
+ else
+ printf ( "%d", a ) ;
+}
+Answer -  0 
+Explaination - the if condition becomes (40>40 && 40<45). The relational operators have more precedence than the conditional. and they are evaluated left to right. the equation then becomes (false && true). For an AND condition to be true, both the values have to be true. and so the answer is false. 
+
+Q7 - main( )
+{
+ int p = 8, q = 20 ;
+ if ( p == 5 && q > 5 )
+ printf ( "\nWhy not C" ) ;
+ else
+ printf ( "\nDefinitely C !" ) ;
+}
+Answer - Definitely C
+Explaination - if (8==5 && 20>5), the relational operators are evaluated first. if (false && true). this makes t false. and the if condition fails.
+
+Q8 - main( )
+{
+ int i = -1, j = 1, k ,l ;
+ k = i && j ;
+ l = i || j ;
+ printf ( "%d %d", l, j ) ;
+} 
+Answer - 1,1.
+Explaination - it is not necessary to evaluate k as it is not being asked. evaluate l, -1 || 1. in this case, both are true conditions, resulting in 1. 
+
+Q9 -main( )
+{
+ int x = 20 , y = 40 , z = 45 ;
+ if ( x > y && x > z )
+ printf( "x is big" ) ;
+ else if ( y > x && y > z )
+ printf( "y is big" ) ;
+ else if ( z > x && z > y )
+ printf( "z is big" ) ;
+}
+Answer - z is big. 
+Explaination - lets evaluate each condition. if (20>40 && 20>45), the relational operators are evaluated first. making this equation, (false&&false).so the first if is not evaluated. Coming to else if, (40>20 && 40> 45), this equation becomes (true && false). But as you know that in case of an operator, both the values have to be true, hence even this is not evaluated. Finally, the last else if is evaluated. (45>20 && 45>40), this evaluates to be true && true. and the code gets into the next line.  
+
+Q10 - main( )
+{
+ int i = -1, j = 1, k ,l ;
+ k = !i && j ;
+ l = !i || j ;
+ printf ( "%d %d", i, j ) ;
+}
+Answer - 
+Explaination - Let us evaluate k, !(-1) && 1. The unary operator is evaluated first and the equation becomes, false && true. Since one value is zero in the and operator k becomes 0. l = !(-1) || 1, the value becomes false or true, but in case of or any one condition should be true. so l becomes 1. however, here the values or i and j are asked. if that is the case the result is -1,1. If k and l are asked it becomes 0,1.
+
+Q11- main( )
+{
+ int j = 4, k ;
+ k = !5 && j ;
+ printf ( "\nk = %d", k ) ;
+} 
+Answer - False
+Explaination - k = !5 && 4. The unary operator is evaluated first, making the equation be 0&&4. Since one of the values is zero for an and operator, the result is false.
+ 

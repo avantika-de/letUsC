@@ -1,0 +1,70 @@
+Question 1- /* This program
+/* is an example of
+/* using Logical operators */
+main( )
+{
+ int i = 2, j = 5 ;
+ if ( i == 2 && j == 5 )
+ printf ( "\nSatisfied at last" ) ;
+} 
+Answer - There is no error in this code. the if condition evaluates to true, and Satisfied at last is printed. 
+
+Q2 - main( )
+{
+ int code, flag ;
+ if ( code == 1 & flag == 0 )
+ printf ( "\nThe eagle has landed" ) ;
+}
+Answer - There is no syntatical error in this code. In this case, code and flag are not assigned any value, making them having a garbage value or non-zero value. The if statement is binded by an and statement, the first of which becomes false. 
+
+Q3 - main( )
+{
+ char spy = 'a', password = 'z' ;
+ if ( spy == 'a' or password == 'z' )
+ printf ( "\nAll the birds are safe in the nest" ) ;
+}
+Answer - This will fail because the code for or operator in c is ||. 
+
+Q4 - main( )
+{int i = 10, j = 20 ;
+ if ( i = 5 ) && if ( j = 10 )
+ printf ( "\nHave a nice day" ) ;
+}
+Answer - You will get an error in this code. This because you cannot bind two if statements with a conditional operator. The right equation would be - if (i==5 && j==20).
+
+Q5 - main( )
+{
+ int x = 10 , y = 20;
+ if ( x >= 2 and y <=50 )
+ printf ( "\n%d", x ) ;
+}
+Answer - You will get an error here, the symbol for and is && in C. 
+
+Q6 - main( )
+{
+ int a, b ;
+ if ( a == 1 & b == 0 )
+ printf ( "\nGod is Great" ) ;
+}
+Answer - Here since a and b are not provided any value, they contain either garbage value or non-zero value. and so the if condition fails. 
+
+Q7 - main( )
+{
+ int x = 2;
+ if ( x == 2 && x != 0 ) ;
+ {
+ printf ( "\nHi" ) ;
+ printf( "\nHello" ) ;
+ }
+ else
+ printf( "Bye" ) ;
+} 
+Answer - The if statement in this code has an ; making the statement complete. the else statement cannot exist without an if statement. Since there is a ; after if, as per compiler the if statement is complete. This causes error. 
+
+Q8 - main( )
+{
+ int i = 10, j = 10 ;
+ if ( i && j == 10)
+ printf ( "\nHave a nice day" ) ;
+ }
+ Answer - There is no error in this code. The and operator is evaluated 10 && 10 results in 10 and this is then compared with 10, fulfilling the if condition. 
