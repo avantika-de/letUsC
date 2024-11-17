@@ -1,0 +1,24 @@
+q1.main( )
+{
+ int i = -4, j, num ;
+ j = ( num < 0 ? 0 : num * num ) ;
+ printf ( "\n%d", j ) ;
+}
+Answer - 0/garbage value. 
+Explaination- We evaluate here if num<0, and since there is no value assigned to it, it goes into the else part. num*num. depending on the compiler it will return either a garbage value or will return 0. But it is because of the else condition. 
+
+Q2- main( )
+{
+ int k, num = 30 ;
+ k = ( num > 5 ? ( num <= 10 ? 100 : 200 ) : 500 ) ;
+ printf ( "\n%d", num ) ;
+} 
+Answer - 30
+Explaination - Here num is greater than 5 and so it gets into if condition where further it is evaluated. but number is greater than 10 and it goes into the else part. k gets assigned the value of 200. However, since we are printing num, the output will be 30.
+
+Q3 - main( )
+{
+ int j = 4 ;
+ ( !j != 1 ? printf ( "\nWelcome") : printf ( "\nGood Bye") ) ;
+ Answer - Welcome
+ Explaination - The unary operator is evaluated. since 4 is a non-zero value it is true, and the negative of it will be false or 0. This makes the condition to go into the if part and welcome is printed.

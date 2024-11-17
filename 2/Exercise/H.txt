@@ -1,0 +1,53 @@
+Q1. main( )
+{
+ int tag = 0, code = 1 ;
+ if ( tag == 0 )
+ ( code > 1 ? printf ( "\nHello" ) ? printf ( "\nHi" ) ) ;
+ else
+ printf ( "\nHello Hi !!" ) ;
+}
+Answer - In case of ternary operations, there should be a : after the ?. You cannot have more than 1 ? in this statement, unless they are inside a bracket. 
+
+Q2. main( )
+{
+ int ji = 65 ;
+ printf ( "\nji >= 65 ? %d : %c", ji ) ;
+} 
+Answer - No error. However, since the condition is insde " of printf, instead of getting evaluate it is printed as a statement. 
+
+Q3. main( )
+{
+ int i = 10, j ;
+ i >= 5 ? ( j = 10 ) : ( j = 15 ) ;
+ printf ( "\n%d %d", i, j ) ;
+} 
+Answer - There is no error in this code. i is evaluated and since i is greater than 5, 10 is assigned to j. When printing 10,10 is printed. 
+
+Q4. main( )
+{
+ int a = 5 , b = 6 ;
+ ( a == b ? printf( "%d",a) ) ;
+}
+Answer - In case of ternary operator, the : is missing. It should be present and its absence causes errors. 
+
+Q5. main( )
+{
+ int n = 9 ;
+ ( n == 9 ? printf( "You are correct" ) ; : printf( "You are wrong" ) ;) ;
+}
+Answer - The syntax of the ternary operator is wrong. In the first printf statement there should not be a ;.
+Q6. main( )
+{
+ int kk = 65 ,ll ;
+ ll = ( kk == 65 : printf ( "\n kk is equal to 65" ) : printf ( "\n kk is not
+equal to 65" ) ) ;
+ printf( "%d", ll ) ;
+} 
+Answer - The error is with the syntax of the ternary operator. You should have a question after the condition has been specified. So it should be kk==65? condition1:condition2;
+
+Q7.main( )
+{
+ int x = 10, y = 20 ;
+ x == 20 && y != 10 ? printf( "True" ) : printf( "False" ) ;
+} 
+Answer - No error.  
